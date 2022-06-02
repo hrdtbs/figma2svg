@@ -1,8 +1,7 @@
 import { getFigmaComponents, getFigmaImages, getImageData } from "./api";
-import fs from "fs";
+import fs from "fs-extra";
 import path from "path";
 import * as core from "@actions/core";
-import { sleep } from "./helper/sleep";
 
 const main = async () => {
   const token = core.getInput("token");
@@ -11,13 +10,14 @@ const main = async () => {
   const components = await getFigmaComponents(token, id);
   const images = await getFigmaImages(token, id, components);
 
-  for (const image of images) {
+  const queues = images.map(async (image) => {
     const data = await getImageData(image.link);
-    const filename = image.name.split("/").pop();
-    const filepath = path.join(output, `${filename}.svg`);
-    fs.writeFileSync(filepath, data);
-    await sleep(5);
-  }
+    const filepath = path.join(output, `${image.name}.svg`);
+    await fs.ensureFile(filepath);
+    await fs.writeFile(filepath, data);
+  });
+
+  await Promise.all(queues);
 };
 
 main();
