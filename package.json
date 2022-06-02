@@ -1,8 +1,8 @@
 {
-  "name": "amgif",
+  "name": "figma2svg",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:hrdtbs/amgif.git",
+  "repository": "git@github.com:hrdtbs/figma2svg.git",
   "author": "hrdtbs <harada.tsubasa.0422@gmail.com>",
   "license": "MIT",
   "scripts": {

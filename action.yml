@@ -1,4 +1,4 @@
-name: "amgif"
+name: "figma2svg"
 description: "Export Figma icons"
 inputs:
   token:

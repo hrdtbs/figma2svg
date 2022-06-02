@@ -1,4 +1,4 @@
-# amgif
+# figma2svg
 
 Convert Figma Components to SVG files
 
@@ -8,7 +8,7 @@ Convert Figma Components to SVG files
 runs-on: ubuntu-latest
 steps:
     - uses: actions/checkout@v3
-    - uses: hrdtbs/amgif@main
+    - uses: hrdtbs/figma2svg@main
     with:
         token: ${{ secrets.FIGMA_TOKEN }}
         id: 7DMwX32ceqkPjENx1xSS5G
