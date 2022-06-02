@@ -1,0 +1,15 @@
+name: "amgif"
+description: "Export Figma icons"
+inputs:
+  token:
+    description: "A Figma Personal Access Token"
+    required: true
+  id:
+    description: "The Figma project ID"
+    required: true
+  output:
+    description: "The output directory"
+    default: "./build"
+runs:
+  using: "node16"
+  main: "dist/main.js"

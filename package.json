@@ -1,0 +1,20 @@
+{
+  "name": "amgif",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hrdtbs/amgif.git",
+  "author": "hrdtbs <harada.tsubasa.0422@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node16 --outfile=dist/main.js --minify"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.2",
+    "node-fetch": "^3.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.38",
+    "esbuild": "^0.14.42",
+    "typescript": "^4.7.2"
+  }
+}
