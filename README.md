@@ -13,6 +13,7 @@ steps:
         token: ${{ secrets.FIGMA_TOKEN }}
         id: 7DMwX32ceqkPjENx1xSS5G
         output: source
+        keep_directory: true
 ```
 
 ## Local run

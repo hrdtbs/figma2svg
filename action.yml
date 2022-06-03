@@ -10,6 +10,9 @@ inputs:
   output:
     description: "The output directory"
     default: "./build"
+  keep_directory:
+    description: "Keep the directory structure"
+    default: false
 runs:
   using: "node16"
   main: "dist/main.js"
